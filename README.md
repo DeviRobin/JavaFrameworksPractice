@@ -9,7 +9,12 @@ B.  Create a README file that includes notes describing where in the code to fin
 >file: README.md. Created a README file including notes describing changes to code. 
 >
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
-> 
+> mainscreen.html
+>- line 13-19: main screen style changes
+>- line 14: title changed 
+>- line 19: changed header
+>- line 21: changed header
+>- line 53: changed header
 > 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 >
