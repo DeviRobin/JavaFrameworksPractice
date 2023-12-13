@@ -39,38 +39,92 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
+        if (partRepository.count()==0) {
+            OutsourcedPart lotion= new OutsourcedPart();
+            lotion.setCompanyName("BLOOP");
+            lotion.setName("Body Lotion");
+            lotion.setInv(5);
+            lotion.setPrice(25.0);
+            lotion.setId(101L);
+            outsourcedPartRepository.save(lotion);
+
+            OutsourcedPart sunCream= new OutsourcedPart();
+            sunCream.setCompanyName("BLOOP");
+            sunCream.setName("Sun Screen");
+            sunCream.setInv(5);
+            sunCream.setPrice(15.0);
+            sunCream.setId(102L);
+            outsourcedPartRepository.save(sunCream);
+
+            OutsourcedPart serum= new OutsourcedPart();
+            serum.setCompanyName("FANCYSTUFF");
+            serum.setName("Serum");
+            serum.setInv(5);
+            serum.setPrice(50.0);
+            serum.setId(103L);
+            outsourcedPartRepository.save(serum);
+
+            OutsourcedPart toner= new OutsourcedPart();
+            toner.setCompanyName("MISHA");
+            toner.setName("Toner");
+            toner.setInv(5);
+            toner.setPrice(10.0);
+            toner.setId(104L);
+            outsourcedPartRepository.save(toner);
+
+            OutsourcedPart nightCream= new OutsourcedPart();
+            nightCream.setCompanyName("FANCYSTUFF");
+            nightCream.setName("Night Cream");
+            nightCream.setInv(5);
+            nightCream.setPrice(25.0);
+            nightCream.setId(105L);
+            outsourcedPartRepository.save(nightCream);
+
+            OutsourcedPart dayCream= new OutsourcedPart();
+            dayCream.setCompanyName("MISHA");
+            dayCream.setName("Day Cream");
+            dayCream.setInv(5);
+            dayCream.setPrice(20.0);
+            dayCream.setId(106L);
+            outsourcedPartRepository.save(dayCream);
+
+            OutsourcedPart thePart=null;
+            List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
+            for(OutsourcedPart part:outsourcedParts){
+                if(part.getName().equals("out test"))thePart=part;
+            }
+            System.out.println(thePart.getCompanyName());
+        }
+        else{
+            List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
+            for(OutsourcedPart part:outsourcedParts){
+                System.out.println(part.getName()+" "+part.getCompanyName());
+            }
         }
 
-        System.out.println(thePart.getCompanyName());
-        */
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            System.out.println(part.getName()+" "+part.getCompanyName());
-        }
 
-        /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
-        */
+
+        if (productRepository.count()==0) {
+            Product completeSetBox= new Product("Complete Set Box",100.0,15);
+            productRepository.save(completeSetBox);
+
+            Product dayTimeBox= new Product("Day Time Skin Care Box",75.0,15);
+            productRepository.save(dayTimeBox);
+
+            Product nightTimeBox= new Product("Night Time Skin Care Box",75.0,15);
+            productRepository.save(nightTimeBox);
+
+            Product winterBox= new Product("Winter Season Box",75.0,15);
+            productRepository.save(winterBox);
+
+            Product summerBox= new Product("Summer Season Box",75.0,15);
+            productRepository.save(summerBox);
+        }
 
         System.out.println("Started in Bootstrap");
-        System.out.println("Number of Products"+productRepository.count());
+        System.out.println("Number of Products: "+productRepository.count());
         System.out.println(productRepository.findAll());
-        System.out.println("Number of Parts"+partRepository.count());
+        System.out.println("Number of Parts: "+partRepository.count());
         System.out.println(partRepository.findAll());
 
     }

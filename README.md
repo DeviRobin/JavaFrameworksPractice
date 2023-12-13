@@ -35,7 +35,11 @@ D.  Add an “About” page to the application to describe your chosen customer�
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
->
+>BootStrapData.java
+>- line 42 and line 98: if else statement created to ensure if there are no existing parts listed, a sample inventory would be created. 
+>- line 43-89: added 6 parts and saved them to the part repository. Only shown if there is no inventory. 
+>- line 107: created an if statement to ensure a sample inventory of products will be present if there is no existing product. 
+>- line 108-121: added 5 products and saved them to the product repository. Only shown if there is no existing inventory upon boot. 
 > 
 
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
