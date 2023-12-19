@@ -46,7 +46,26 @@ F.  Add a “Buy Now” button to your product list. Your “Buy Now” button m
 - The “Buy Now” button must be next to the buttons that update and delete products.
 - The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 - Display a message that indicates the success or failure of a purchase.
+>mainscreen.html
+>- line 113-114 : created another button using href next to update and delete buttons. I then mapped it to /buyProduct url created a hidden input field to pass tempProduct.id to controller. 
+>- 
+>BuyProductController.java
+>- created a new Java file in /controllers called BuyProductController. 
+>- line 12 set it as a Controller 
+>- line 15-16: added Product Repository object and annotated with Autowired
+>- line 19-20: used GetMapping to map to /buyProduct and made public string method, buyProduct. used @RequestParam to get the hidden input from mainscreen.html, and use as input param. 
+>- line 21: created theIdl to change theID to a long instead of int so it can be used as an input in next line. 
+>- line 22: created an Optional<Product>result which return if a product is present or not in the database, and set it to search the productrepository using findbyID for the product.
+>- line 23-38: created a Product object called theProduct and set it to null, then used a if then statement to determine if the product exists in the data base or does not. If it doesnt exist it throws an exception
+>- line 27- 34: if it does exist, a nested ifthen statement is used to determine if there is inventory of it or not. if there is the inventory is decremented by 1 and the user is directed confirmation html page.if not a a error page. 
 >
+> cannotpurchase.html
+>- simple html page users are redirected to if the product they seek has no inventory. 
+>- line 47: link mapped to mainscreen.
+>- 
+> confirmationofpurchase.html
+>- simple html page users are redirected to if the product they seek has enough inventory and has been "purchased"(inv - 1).
+>- line 50: link mapped to mainscreen.
 > 
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
 - Add additional fields to the part entity for maximum and minimum inventory.
