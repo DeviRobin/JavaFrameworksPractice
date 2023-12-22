@@ -73,8 +73,38 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 - Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
 - Rename the file the persistent storage is saved to.
 - Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+>Part.java
+>- line 23: added validation annotation. 
+>- line 34-37: added additional min and maxInv fields. 
+>- line 58-65: added new constructor including new fields. 
+>- line 95-102: added new getter and setters for new fields. 
+>- line 114-123: added new isInvValid method to check if inv is in min max range.
 >
-> 
+> BootStrapData.java
+>- line 49-100: Added max and min Inventory to all sample inventory.
+>ValidInventoryParts.java
+>- new interface to define new annotation 
+>- line 10-17: used Constraint annotation and defined the class that will validate the field. 
+>- line 14: defined error message that will show in user interface. 
+>
+>InventoryPartsValidator.java
+>- created a validator class to enforce rules of the @ValidInventoryParts validator. 
+>- line 15-20: implements ConstraintValidator interface
+>- line 25-34: implements the isValid method and define validation rules which state it is valid only in inv > minInv and inv<maxInv. 
+>
+> InhousePartForm.html 
+>- line 8-12: css to show error in red
+>- line 28-33: addition of minInv and maxInv input and error display
+>- line 36-43: decision to list all errors in one place below in red. 
+>
+>OutSourcedPartForm.html
+>- line 8-12: css to show error in red
+>- line 30-35: addition of minInv and maxInv input and error display
+>- line 38-46: decision to list all errors in one place below in red.
+>- 
+>application.properties
+> - changed db file name to on local directory and here to d287-java-frameworks-h2-db. 
+
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 - Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 - Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.

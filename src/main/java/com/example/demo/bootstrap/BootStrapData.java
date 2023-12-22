@@ -46,6 +46,8 @@ public class BootStrapData implements CommandLineRunner {
             lotion.setInv(5);
             lotion.setPrice(25.0);
             lotion.setId(101L);
+            lotion.setMinInv(5);
+            lotion.setMaxInv(20);
             outsourcedPartRepository.save(lotion);
 
             OutsourcedPart sunCream= new OutsourcedPart();
@@ -54,6 +56,8 @@ public class BootStrapData implements CommandLineRunner {
             sunCream.setInv(5);
             sunCream.setPrice(15.0);
             sunCream.setId(102L);
+            sunCream.setMinInv(5);
+            sunCream.setMaxInv(20);
             outsourcedPartRepository.save(sunCream);
 
             OutsourcedPart serum= new OutsourcedPart();
@@ -62,6 +66,8 @@ public class BootStrapData implements CommandLineRunner {
             serum.setInv(5);
             serum.setPrice(50.0);
             serum.setId(103L);
+            serum.setMinInv(5);
+            serum.setMaxInv(20);
             outsourcedPartRepository.save(serum);
 
             OutsourcedPart toner= new OutsourcedPart();
@@ -70,6 +76,8 @@ public class BootStrapData implements CommandLineRunner {
             toner.setInv(5);
             toner.setPrice(10.0);
             toner.setId(104L);
+            toner.setMinInv(5);
+            toner.setMaxInv(20);
             outsourcedPartRepository.save(toner);
 
             OutsourcedPart nightCream= new OutsourcedPart();
@@ -78,6 +86,8 @@ public class BootStrapData implements CommandLineRunner {
             nightCream.setInv(5);
             nightCream.setPrice(25.0);
             nightCream.setId(105L);
+            nightCream.setMinInv(5);
+            nightCream.setMaxInv(20);
             outsourcedPartRepository.save(nightCream);
 
             OutsourcedPart dayCream= new OutsourcedPart();
@@ -86,6 +96,8 @@ public class BootStrapData implements CommandLineRunner {
             dayCream.setInv(5);
             dayCream.setPrice(20.0);
             dayCream.setId(106L);
+            dayCream.setMinInv(5);
+            dayCream.setMaxInv(20);
             outsourcedPartRepository.save(dayCream);
 
             OutsourcedPart thePart=null;
