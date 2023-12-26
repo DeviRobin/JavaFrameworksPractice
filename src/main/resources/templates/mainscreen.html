@@ -34,6 +34,9 @@
         tr {
             color: #364A45
         }
+        .error {
+            color: red;
+        }
     </style>
     <title>The Skin Care Shop</title>
 </head>
@@ -80,6 +83,8 @@
         </tr>
         </tbody>
     </table>
+    <br>
+    <br>
     <h2>Skin Care Routine Boxes</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}"

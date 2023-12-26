@@ -134,6 +134,11 @@ I.  Add at least two unit tests for the maximum and minimum fields to the PartTe
 > line 159-194: created unit test for setMin, setMax, getMin, and getMax. All tests passesd. 
 > 
 J.  Remove the class files for any unused validators in order to clean your code.
->
+>DeletePartValidator.java 
+> - deleted validator due to lack of use.
+> ValidDeletePart.java
+> - deleted annotation due to lack of use.
+> Part.java
+> - deleted DeltePartValidator import due to lack of use. 
 > 
 L.  Demonstrate professional communication in the content and presentation of your submission.
