@@ -2,6 +2,8 @@ package com.example.demo.domain;
 
 import com.example.demo.validators.ValidDeletePart;
 import com.example.demo.validators.ValidInventoryParts;
+import com.example.demo.validators.ValidMaxInventoryParts;
+import com.example.demo.validators.ValidMinInventoryParts;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
@@ -21,6 +23,8 @@ import java.util.Set;
 @DiscriminatorColumn(name="part_type",discriminatorType = DiscriminatorType.INTEGER)
 @Table(name="Parts")
 @ValidInventoryParts
+@ValidMaxInventoryParts
+@ValidMinInventoryParts
 public abstract class Part implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -112,14 +116,13 @@ public abstract class Part implements Serializable {
         return this.name;
     }
 
-public boolean isInvValid() {
+    public boolean isInvValid() {
         if ((inv >= minInv) & (inv <= maxInv)) {
             return true;
         } else {
             return false;
         }
     }
-
 
     @Override
     public boolean equals(Object o) {

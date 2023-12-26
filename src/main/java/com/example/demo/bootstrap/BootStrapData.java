@@ -43,7 +43,7 @@ public class BootStrapData implements CommandLineRunner {
             OutsourcedPart lotion= new OutsourcedPart();
             lotion.setCompanyName("BLOOP");
             lotion.setName("Body Lotion");
-            lotion.setInv(5);
+            lotion.setInv(10);
             lotion.setPrice(25.0);
             lotion.setId(101L);
             lotion.setMinInv(5);
@@ -53,7 +53,7 @@ public class BootStrapData implements CommandLineRunner {
             OutsourcedPart sunCream= new OutsourcedPart();
             sunCream.setCompanyName("BLOOP");
             sunCream.setName("Sun Screen");
-            sunCream.setInv(5);
+            sunCream.setInv(10);
             sunCream.setPrice(15.0);
             sunCream.setId(102L);
             sunCream.setMinInv(5);
@@ -63,7 +63,7 @@ public class BootStrapData implements CommandLineRunner {
             OutsourcedPart serum= new OutsourcedPart();
             serum.setCompanyName("FANCYSTUFF");
             serum.setName("Serum");
-            serum.setInv(5);
+            serum.setInv(10);
             serum.setPrice(50.0);
             serum.setId(103L);
             serum.setMinInv(5);
@@ -73,7 +73,7 @@ public class BootStrapData implements CommandLineRunner {
             OutsourcedPart toner= new OutsourcedPart();
             toner.setCompanyName("MISHA");
             toner.setName("Toner");
-            toner.setInv(5);
+            toner.setInv(10);
             toner.setPrice(10.0);
             toner.setId(104L);
             toner.setMinInv(5);
@@ -83,7 +83,7 @@ public class BootStrapData implements CommandLineRunner {
             OutsourcedPart nightCream= new OutsourcedPart();
             nightCream.setCompanyName("FANCYSTUFF");
             nightCream.setName("Night Cream");
-            nightCream.setInv(5);
+            nightCream.setInv(10);
             nightCream.setPrice(25.0);
             nightCream.setId(105L);
             nightCream.setMinInv(5);
@@ -93,7 +93,7 @@ public class BootStrapData implements CommandLineRunner {
             OutsourcedPart dayCream= new OutsourcedPart();
             dayCream.setCompanyName("MISHA");
             dayCream.setName("Day Cream");
-            dayCream.setInv(5);
+            dayCream.setInv(10);
             dayCream.setPrice(20.0);
             dayCream.setId(106L);
             dayCream.setMinInv(5);
