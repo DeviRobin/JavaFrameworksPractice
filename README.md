@@ -103,7 +103,10 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 >- line 38-46: decision to list all errors in one place below in red.
 >- 
 >application.properties
-> - changed db file name to on local directory and here to d287-java-frameworks-h2-db. 
+> - changed db file name to on local directory and here to d287-java-frameworks-h2-db.
+> mainscreen.html
+> - line 63-64: addition of min and max inventory fields on table
+> - line 73-74: addition of min and max inventory data in table. 
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 - Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
@@ -127,7 +130,8 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 > - line 20: added to message to clarify error.  
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
->
+>PartTest.java 
+> line 159-194: created unit test for setMin, setMax, getMin, and getMax. All tests passesd. 
 > 
 J.  Remove the class files for any unused validators in order to clean your code.
 >
